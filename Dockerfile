@@ -2,6 +2,7 @@ FROM fedora:rawhide
 MAINTAINER František Dvořák <valtri@civ.zcu.cz>
 
 RUN dnf install -y git java-1.8.0-openjdk-headless openssh-server sudo \
+ && dnf install -y policycoreutils-newrole \
  && dnf clean all \
  && rm -rf /var/cache/dnf/*
 
